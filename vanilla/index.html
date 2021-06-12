@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter - Vanilla</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+           <h1>Typewriter - vanilla</h1> 
+           <button class="start-button">Start</button>  
+           <p class="text-place-holder"></p>
+           <textarea oncut="return false" oncopy="return false" onpaste="return false" spellcheck="false" autofocus disabled class="typing-area" rows="14"></textarea> 
+        </div>
+        <div class="right">    
+            <h2 class="score-title">Your score: </h2>
+            <div class="indicator-el"></div>            
+            <div class="score-outer">
+                <p>Score: <span class="score-total">44</span></p>
+                <p>Correct letters: <span class="score-correct-letters">44</span></p>
+                <p>Incorrect letters: <span class="score-incorrect-letters">44</span></p>
+                <p>Time: <span class="score-time">1.24 sec</span></p>
+            </div>    
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
