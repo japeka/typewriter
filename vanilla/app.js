@@ -122,7 +122,7 @@ function defaultFadeConfig() {
  if(API_KEY === '<YOUR_API_KEY>') {
         btnElement.disabled = true;
         textAreaElement.style.display = 'none';
-        pElement.textContent = "API KEY missing. Get one and try again";
+        pElement.textContent = "API KEY missing. Get one and try again. One can be gotten from https://api.inferkit.com";
         return;
  }
 })();
