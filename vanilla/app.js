@@ -19,6 +19,7 @@ let dEnd = null;
 getRandomWord = () => predefinedWords[Math.floor(Math.random()*(predefinedWords.length-1))];
 
 btnElement.addEventListener("click", (e) => {
+   if(API_KEY === '<YOUR_API_KEY>') { return;}
     pElement.textContent = "Loading..";
     let word = this.getRandomWord();
     textAreaElement.value = '';
@@ -117,3 +118,11 @@ function defaultFadeConfig() {
       }  
   }
   
+(getApiKeyStatus = () => {
+ if(API_KEY === '<YOUR_API_KEY>') {
+        btnElement.disabled = true;
+        textAreaElement.style.display = 'none';
+        pElement.textContent = "API KEY missing. Get one and try again";
+        return;
+ }
+})();
